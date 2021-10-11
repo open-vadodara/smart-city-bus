@@ -1,7 +1,7 @@
 {
   "name": "ls",
   "version": "1.0.0",
-  "description": "## Details / NOTES",
+  "description": "scripts to extract and convert txt to jsons",
   "main": "process.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

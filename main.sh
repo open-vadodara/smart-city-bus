@@ -25,13 +25,13 @@ while IFS= read -r line
 do
   route_no=$(echo $line | cut -d "-" -f 1)
   timetable_id=$(echo $line | cut -d "-" -f 2)
-  curl "http://14.98.182.250:4016/Route/GetRouteTripDetails?TimeTableTripID=$timetable_id&ScheduleDate=$date" --output "$temp/tt_$route_no.txt"
+  curl "http://14.98.182.250:4016/Route/GetRouteTripDetails?TimeTableTripID=$timetable_id&ScheduleDate=$date" --output "$tt/tt_$route_no.txt"
 done < timetables.txt
 
 echo "# Processing raw timetable data and converting into json..."
 node process.js $tt $json true
 
-echo "# Done..."
-
 # rm -rf $temp
 # rm -rf $tt
+
+echo "# Done..."
