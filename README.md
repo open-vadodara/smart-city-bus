@@ -20,7 +20,7 @@ curl 'http://14.98.182.250:4016/Route/GetRouteTripDetails' -X 'POST' -H 'Content
 
 **Sample Response Data**
 
-```json
+```javascript
 [
   {
       "ROWID": 1,
@@ -54,7 +54,7 @@ http://14.98.182.250:4016/Route/GetRouteTripDetails?TimeTableTripID=$timetable_i
 
 **Sample Response Data**
 
-```json
+```javascript
 {
   "Table": [
     {
