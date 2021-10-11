@@ -31,7 +31,7 @@ done < timetables.txt
 echo "# Processing raw timetable data and converting into json..."
 node process.js $tt $json true
 
-# rm -rf $temp
-# rm -rf $tt
+rm -rf $temp
+rm -rf $tt
 
 echo "# Done..."
