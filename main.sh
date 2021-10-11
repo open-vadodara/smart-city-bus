@@ -1,23 +1,23 @@
 #!/bin/bash
 
-buses=$(<bus_numbers.txt)
-export IFS='\n'
+date=$(date '+%d-%b-%Y')
+IFS='\n'
+temp='temp'
+json='route_details'
+mkdir $temp
+mkdir $json
 
-for i in $buses; do
-  # curl "http://14.98.182.250:4016/Route?RouteID=27"
-  echo "<<< $i asdf"
-done
+echo "# Downloading from website..."
+while IFS= read -r line
+do
+  id=$(echo $line | cut -d "-" -f 1)
+  route_no=$(echo $line | cut -d "-" -f 2)
+  curl "14.98.182.250:4016/Route/GetRouteTripTimingDetails?Date=$date&RouteID=$id" --output "$temp/$route_no.txt"
+done < bus_numbers.txt
 
-# for i in $buses; do
-#   for eb in $i; do
-#     echo "$eb <><><><\n\n"
-#   done
-# done
+echo "# Processing raw data and converting into json"
+node process.js $temp $json
 
+echo "# Done!"
 
-# for i in $buses; do
-#   read -ra arr <<< "$i"
-#   for val in "${arr[@]}"; do
-#     printf "name = $val\n"
-#   done
-# done
+rm -rf $temp
