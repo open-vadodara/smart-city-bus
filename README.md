@@ -3,6 +3,7 @@
 ## Details / NOTES
 
 ### Getting Route Details
+
 Given a time, get route stops + ETA
 
 * URL = `http://14.98.182.250:4016/Route/GetRouteTripDetails`
@@ -108,3 +109,12 @@ http://14.98.182.250:4016/Route/GetRouteTripDetails?TimeTableTripID=$timetable_i
 * All extrated and parsed data are stored in `route_details/` folder
 * `<bus_no>.json` - files contains the respective bus route's timings
 * `tt_<bus_no>.json` - files contains the respective bus route's bus-stop names, lat-long for each bus-stop as well as the sequece of lat-longs i.e. the path/route taken by the bus
+
+
+## Possible Analysis / Products
+
+* Map of all bus-stops in Vadodara
+* Map of all bus routes in Vadodara
+* Get time taken between two stops
+* For a particular stop, get all buses that visit + timings
+* For a partiular bus, get route
