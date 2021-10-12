@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 date=$(date '+%d-%b-%Y')
 IFS='\n'
 temp='temp'
