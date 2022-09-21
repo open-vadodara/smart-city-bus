@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/open-vadodara/smart-city-bus/issues"
   },
-  "homepage": "https://github.com/open-vadodara/smart-city-bus#readme"
+  "homepage": "https://github.com/open-vadodara/smart-city-bus#readme",
+  "dependencies": {
+    "d3": "^7.4.5"
+  }
 }
