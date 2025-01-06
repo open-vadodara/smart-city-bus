@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenStreetMap Example</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map {
+      height: 600px;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Map with Points and Path</h1>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    // Create the map instance and set initial view
+    // const map = L.map("map").setView([51.505, -0.09], 13);
+    const map = L.map("map").setView([22.3220818, 73.0906863], 13);
+    // for Vadodara, use : 22.3220818, 73.0906863
+
+    // Add OpenStreetMap tiles to the map
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Load the JSON file
+    fetch("route_details/tt_3U.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const table = data['Table']
+        const path_coordinates = []
+
+        // Plot each point
+        table.forEach((point) => {
+          const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map);
+          marker.bindPopup(`<b>${point.POI_NAME}</b>`);
+
+          point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1).split(', ').forEach((item) => {
+            path_coordinates.push(item.split(' ').reverse())
+          })
+        });
+
+        console.log(path_coordinates);
+        
+        // Plot the path using GeoJSON
+        const geoJsonPath = {
+          type: "Feature",
+          geometry: {
+            'type': 'LineString',
+            'coordinates': path_coordinates
+          },
+          properties: {},
+        };
+        L.geoJSON(geoJsonPath, {
+          style: {
+            color: "blue",
+            weight: 4,
+            opacity: 0.7,
+          },
+        }).addTo(map);
+      })
+      .catch((error) => {
+        console.error("Error loading JSON data:", error);
+      });
+  </script>
+</body>
+</html>
