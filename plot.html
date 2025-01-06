@@ -28,45 +28,82 @@
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     }).addTo(map);
 
-    // Load the JSON file
-    fetch("route_details/tt_3U.json")
-      .then((response) => response.json())
-      .then((data) => {
-        const table = data['Table']
-        const path_coordinates = []
+    const jsonFiles = [
+      "tt_2U.json",
+      "tt_3U.json",
+      "tt_4U.json",
+      "tt_5U.json",
+      "tt_6U.json",
+      "tt_7U.json",
+      "tt_8U.json",
+      "tt_9U.json",
+      "tt_10U.json",
+      "tt_11U.json",
+      "tt_12U.json",
+      "tt_13U.json",
+      "tt_14U.json",
+      "tt_15U.json",
+      "tt_16U.json",
+      "tt_17U.json",
+      "tt_18U.json",
+      "tt_19U.json",
+      "tt_20U.json",
+      "tt_21U.json",
+      "tt_22U.json",
+      "tt_23U.json",
+      "tt_24U.json",
+      "tt_25U.json",
+      "tt_26U.json",
+      "tt_27U.json",
+      "tt_28U.json",
+      "tt_29U.json",
+      "tt_30U.json",
+      "tt_31U.json"
+    ]
 
-        // Plot each point
-        table.forEach((point) => {
-          const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map);
-          marker.bindPopup(`<b>${point.POI_NAME}</b>`);
+    Promise.all(
+      jsonFiles.map((file) =>
+        // Load each JSON file from folder
+        fetch(`route_details/${file}`)
+        .then((response) => response.json())
+        .then((data) => {
+          const table = data['Table']
+          const path_coordinates = []
 
-          point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1).split(', ').forEach((item) => {
-            path_coordinates.push(item.split(' ').reverse())
-          })
-        });
+          // Plot each point
+          table.forEach((point) => {
+            const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map);
+            marker.bindPopup(`<b>${point.POI_NAME}</b>`);
 
-        console.log(path_coordinates);
-        
-        // Plot the path using GeoJSON
-        const geoJsonPath = {
-          type: "Feature",
-          geometry: {
-            'type': 'LineString',
-            'coordinates': path_coordinates
-          },
-          properties: {},
-        };
-        L.geoJSON(geoJsonPath, {
-          style: {
-            color: "blue",
-            weight: 4,
-            opacity: 0.7,
-          },
-        }).addTo(map);
-      })
-      .catch((error) => {
-        console.error("Error loading JSON data:", error);
-      });
+            point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1).split(', ').forEach((item) => {
+              path_coordinates.push(item.split(' ').reverse())
+            })
+          });
+          
+          // Plot the path using GeoJSON
+          const geoJsonPath = {
+            type: "Feature",
+            geometry: {
+              'type': 'LineString',
+              'coordinates': path_coordinates
+            },
+            properties: {},
+          };
+          L.geoJSON(geoJsonPath, {
+            style: {
+              color: "blue",
+              weight: 4,
+              opacity: 0.7,
+            },
+          }).addTo(map);
+        })
+        .catch((error) => {
+          console.error("Error loading JSON data:", error);
+        })
+      )
+    ).then((data) => {
+      console.log("All JSON files loaded:", data);
+    });
   </script>
 </body>
 </html>
