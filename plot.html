@@ -29,14 +29,22 @@
     }).addTo(map);
 
     const jsonFiles = [
+      // "test.json"
       "tt_2U.json",
       "tt_3U.json",
       "tt_4U.json",
       "tt_5U.json",
       "tt_6U.json",
       "tt_7U.json",
+      "tt_7BU.json",
+      "tt_7CU.json",
       "tt_8U.json",
-      "tt_9U.json",
+      "tt_9AU.json",
+      "tt_9BU.json",
+      "tt_9CU.json",
+      "tt_9DU.json",
+      "tt_9EU.json",
+      "tt_9FU.json",
       "tt_10U.json",
       "tt_11U.json",
       "tt_12U.json",
@@ -73,22 +81,25 @@
           // Plot each point
           table.forEach((point) => {
             const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map);
-            marker.bindPopup(`<b>${point.POI_NAME}</b>`);
+            marker.bindPopup(`<b>${file.substring(3, file.length - 5)} - ${point.POI_NAME}</b>`);
 
             point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1).split(', ').forEach((item) => {
-              path_coordinates.push(item.split(' ').reverse())
+              path_coordinates.push(item.split(' ').reverse().map(a => parseFloat(a)))
             })
           });
+
+          const path_coords_no_dupes = removeDuplicateArrays(path_coordinates)
           
           // Plot the path using GeoJSON
           const geoJsonPath = {
             type: "Feature",
             geometry: {
               'type': 'LineString',
-              'coordinates': path_coordinates
+              'coordinates': path_coords_no_dupes
             },
             properties: {},
           };
+          console.log(geoJsonPath);
           L.geoJSON(geoJsonPath, {
             style: {
               color: "blue",
@@ -104,6 +115,23 @@
     ).then((data) => {
       console.log("All JSON files loaded:", data);
     });
+
+    function removeDuplicateArrays(arrayOfArrays) {
+      // Use a Set to store unique stringified arrays
+      const uniqueSet = new Set();
+
+      // Filter the array to remove duplicates
+      return arrayOfArrays.filter((arr) => {
+        const stringified = JSON.stringify(arr); // Convert the array to a string
+        if (uniqueSet.has(stringified)) {
+          return false; // Duplicate found, filter it out
+        } else {
+          uniqueSet.add(stringified); // Add to Set and keep it
+          return true; // Keep this array
+        }
+      });
+    }
+
   </script>
 </body>
 </html>
