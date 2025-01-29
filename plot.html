@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <style>
     #map {
-      height: 600px;
+      height: 900px;
       width: 100%;
     }
   </style>
@@ -16,122 +16,209 @@
   <h1>Map with Points and Path</h1>
   <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script>
-    // Create the map instance and set initial view
-    // const map = L.map("map").setView([51.505, -0.09], 13);
-    const map = L.map("map").setView([22.3220818, 73.0906863], 13);
-    // for Vadodara, use : 22.3220818, 73.0906863
 
-    // Add OpenStreetMap tiles to the map
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    }).addTo(map);
+  <label for="bus-route">Choose a route:</label>
+  <!-- <input list="bus-routes" id="bus-route" name="bus-route" /> -->
+  <select id="bus-routes" onchange="showRoutes([this.value])">
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    <option value="13">13</option>
+    <option value="14">14</option>
+    <option value="15">15</option>
+    <option value="16">16</option>
+    <option value="17">17</option>
+    <option value="18">18</option>
+    <option value="19">19</option>
+    <option value="20">20</option>
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="25">25</option>
+    <option value="26">26</option>
+    <option value="27">27</option>
+    <option value="28">28</option>
+    <option value="29">29</option>
+    <option value="30">30</option>
+    <option value="31">31</option>
+    <option value="2U">2U</option>
+    <option value="3U">3U</option>
+    <option value="4U">4U</option>
+    <option value="5U">5U</option>
+    <option value="6U">6U</option>
+    <option value="7U">7U</option>
+    <option value="7B">7B</option>
+    <option value="7C">7C</option>
+    <option value="8U">8U</option>
+    <option value="9A">9A</option>
+    <option value="9B">9B</option>
+    <option value="9C">9C</option>
+    <option value="9D">9D</option>
+    <option value="9E">9E</option>
+    <option value="9F">9F</option>
+  </select>
 
-    const jsonFiles = [
-      // "test.json"
-      "tt_2U.json",
-      "tt_3U.json",
-      "tt_4U.json",
-      "tt_5U.json",
-      "tt_6U.json",
-      "tt_7U.json",
-      "tt_7BU.json",
-      "tt_7CU.json",
-      "tt_8U.json",
-      "tt_9AU.json",
-      "tt_9BU.json",
-      "tt_9CU.json",
-      "tt_9DU.json",
-      "tt_9EU.json",
-      "tt_9FU.json",
-      "tt_10U.json",
-      "tt_11U.json",
-      "tt_12U.json",
-      "tt_13U.json",
-      "tt_14U.json",
-      "tt_15U.json",
-      "tt_16U.json",
-      "tt_17U.json",
-      "tt_18U.json",
-      "tt_19U.json",
-      "tt_20U.json",
-      "tt_21U.json",
-      "tt_22U.json",
-      "tt_23U.json",
-      "tt_24U.json",
-      "tt_25U.json",
-      "tt_26U.json",
-      "tt_27U.json",
-      "tt_28U.json",
-      "tt_29U.json",
-      "tt_30U.json",
-      "tt_31U.json"
-    ]
+  <h2>Route time table</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Start Time (city bus center)</th>
+        <th>End Time (last stop)</th>
+      </tr>
+    </thead>
+    <tbody id="timetable"></tbody>
+  </table>
 
-    Promise.all(
-      jsonFiles.map((file) =>
-        // Load each JSON file from folder
-        fetch(`route_details/${file}`)
-        .then((response) => response.json())
-        .then((data) => {
-          const table = data['Table']
-          const path_coordinates = []
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // Create the map instance and set initial view
+  const map = L.map("map").setView([22.3220818, 73.0906863], 13);
 
-          // Plot each point
-          table.forEach((point) => {
-            const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map);
-            marker.bindPopup(`<b>${file.substring(3, file.length - 5)} - ${point.POI_NAME}</b>`);
+  // Add OpenStreetMap tiles to the map
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  }).addTo(map);
 
-            point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1).split(', ').forEach((item) => {
-              path_coordinates.push(item.split(' ').reverse().map(a => parseFloat(a)))
-            })
-          });
+  const jsonFiles = {
+    'test': "test.json",
+    '2U': "tt_2U.json",
+    '3U': "tt_3U.json",
+    '4U': "tt_4U.json",
+    '5U': "tt_5U.json",
+    '6U': "tt_6U.json",
+    '7U': "tt_7U.json",
+    '7B': "tt_7BU.json",
+    '7C': "tt_7CU.json",
+    '8U': "tt_8U.json",
+    '9A': "tt_9AU.json",
+    '9B': "tt_9BU.json",
+    '9C': "tt_9CU.json",
+    '9D': "tt_9DU.json",
+    '9E': "tt_9EU.json",
+    '9F': "tt_9FU.json",
+    '10': "tt_10U.json",
+    '11': "tt_11U.json",
+    '12': "tt_12U.json",
+    '13': "tt_13U.json",
+    '14': "tt_14U.json",
+    '15': "tt_15U.json",
+    '16': "tt_16U.json",
+    '17': "tt_17U.json",
+    '18': "tt_18U.json",
+    '19': "tt_19U.json",
+    '20': "tt_20U.json",
+    '21': "tt_21U.json",
+    '22': "tt_22U.json",
+    '23': "tt_23U.json",
+    '24': "tt_24U.json",
+    '25': "tt_25U.json",
+    '26': "tt_26U.json",
+    '27': "tt_27U.json",
+    '28': "tt_28U.json",
+    '29': "tt_29U.json",
+    '30': "tt_30U.json",
+    '31': "tt_31U.json"
+  }
 
-          const path_coords_no_dupes = removeDuplicateArrays(path_coordinates)
-          
-          // Plot the path using GeoJSON
-          const geoJsonPath = {
-            type: "Feature",
-            geometry: {
-              'type': 'LineString',
-              'coordinates': path_coords_no_dupes
-            },
-            properties: {},
-          };
-          console.log(geoJsonPath);
-          L.geoJSON(geoJsonPath, {
-            style: {
-              color: "blue",
-              weight: 4,
-              opacity: 0.7,
-            },
-          }).addTo(map);
+
+  function showTimeTable(routes) {
+    const files = routes.map((r) => jsonFiles[r].substring(3, jsonFiles[r].length))
+    const tt_table = document.getElementById('timetable')
+    files.map((file) => {
+      fetch(`route_details/${file}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        const rows = data.map((d) => {
+          return `<tr><td>${d['TRIP_TIME']}</td><td>${d['TRIP_END_TIME']}</td></tr>`
         })
-        .catch((error) => {
-          console.error("Error loading JSON data:", error);
-        })
-      )
-    ).then((data) => {
-      console.log("All JSON files loaded:", data);
+
+        tt_table.innerHTML = rows.join('')
+      })
+    })
+  }
+
+  /**
+   * Given set of routes, load the map for those routes
+   * @param `routes` <array> - list of route file name for .json data
+   */ 
+  function showRoutes(routes) {
+    const files = routes.map((r) => jsonFiles[r])
+    showTimeTable(routes)
+
+    files.map((file) =>
+      // Load each JSON file from folder
+      fetch(`route_details/${file}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const table = data['Table']
+        const path_coordinates = []
+
+        // Plot each point
+        table.forEach((point) => {
+          const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map);
+          marker.bindPopup(`<b>${file.substring(3, file.length - 5)} - ${point.POI_NAME}</b> -> ${point.REACH_TIME}`);
+
+          point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1).split(', ').forEach((item) => {
+            path_coordinates.push(item.split(' ').reverse().map(a => parseFloat(a)))
+          })
+        });
+
+        // this is because of the data issue in the JSON files
+        const path_coords_no_dupes = removeDuplicateArrays(path_coordinates)
+        
+        // Plot the path using GeoJSON
+        const geoJsonPath = {
+          type: "Feature",
+          geometry: {
+            'type': 'LineString',
+            'coordinates': path_coords_no_dupes
+          },
+          properties: {},
+        };
+        // console.log(geoJsonPath);
+        L.geoJSON(geoJsonPath, {
+          style: {
+            color: "blue",
+            weight: 4,
+            opacity: 0.7,
+          },
+        }).addTo(map);
+      })
+      .catch((error) => {
+        console.error("Error loading JSON data:", error);
+      })
+    )
+  }
+
+  // Promise.all(
+  //   showRoutes(jsonFiles)
+  // ).then((data) => {
+  //   console.log("All JSON files loaded:", data);
+  // });
+
+  function removeDuplicateArrays(arrayOfArrays) {
+    // Use a Set to store unique stringified arrays
+    const uniqueSet = new Set();
+
+    // Filter the array to remove duplicates
+    return arrayOfArrays.filter((arr) => {
+      const stringified = JSON.stringify(arr); // Convert the array to a string
+      if (uniqueSet.has(stringified)) {
+        return false; // Duplicate found, filter it out
+      } else {
+        uniqueSet.add(stringified); // Add to Set and keep it
+        return true; // Keep this array
+      }
     });
+  }
 
-    function removeDuplicateArrays(arrayOfArrays) {
-      // Use a Set to store unique stringified arrays
-      const uniqueSet = new Set();
+  window.onload = (evt) => {
+    // show default routes
+    // showRoutes(['2U', '23', '21'])
+  }
 
-      // Filter the array to remove duplicates
-      return arrayOfArrays.filter((arr) => {
-        const stringified = JSON.stringify(arr); // Convert the array to a string
-        if (uniqueSet.has(stringified)) {
-          return false; // Duplicate found, filter it out
-        } else {
-          uniqueSet.add(stringified); // Add to Set and keep it
-          return true; // Keep this array
-        }
-      });
-    }
-
-  </script>
+</script>
 </body>
 </html>
