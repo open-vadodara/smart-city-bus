@@ -1,5 +1,7 @@
 # smart-city-bus
 
+![image](https://github.com/user-attachments/assets/36459f51-239c-4b85-a297-986ec4da7248)
+
 ## Details / NOTES
 
 ### Getting Route Details
