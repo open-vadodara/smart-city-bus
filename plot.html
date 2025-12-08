@@ -16,9 +16,10 @@
   <h1>Map with Points and Path</h1>
   <div id="map"></div>
 
-  <label for="bus-route">Choose a route:</label>
+  <label for="bus-routes">Choose a route:</label>
   <!-- <input list="bus-routes" id="bus-route" name="bus-route" /> -->
   <select id="bus-routes" onchange="showRoute(this.value)"></select>
+  <!-- <button onclick="showRoute(document.getElementById('buxs-route').selectedIndex)">show time table</button> -->
 
   <h2>Route time table</h2>
   <table>
@@ -33,6 +34,10 @@
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
+
+  fetch('./route_details/2D.json')
+    .then(response => response.text())
+    .then(data => { console.log('file contents', JSON.parse(data)) })
 
   // load routes names & timetable for routes (filenames only) into memory
   const ROUTES_DATA = {};
@@ -105,8 +110,9 @@
    * @param `routes` <array> - list of route file name for .json data
    */ 
   function showRoute(route) {
-
     const file = ROUTES_DATA[route]
+
+    console.log(route, file)
 
     // path data is stored int the `tt_` files
     fetch(`route_details/tt_${file}`)
@@ -166,7 +172,7 @@
         uniqueSet.add(stringified); // Add to Set and keep it
         return true; // Keep this array
       }
-    });
+    })
   }
 
   window.onload = (evt) => {
@@ -176,7 +182,7 @@
     // showRoutes(['2U', '23', '21'])
 
     // display all routes
-    Object.keys(ROUTES_DATA).map(e => showRoute(e))
+    // Object.keys(ROUTES_DATA).map(e => showRoute(e))
   }
 
 </script>
