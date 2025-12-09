@@ -13,3 +13,17 @@ export default function removeDuplicateArrays(arrayOfArrays) {
     }
   })
 }
+
+/**
+ * for a given point, find all routes passing through it
+ */
+function getRoutesThroughPoint(point) {
+  console.log('gives routes through point', point)
+}
+
+/**
+ * for a given route and point, get the timings
+ */
+function getTimingsForRouteAtPoint(point, route) {
+  console.log('gives timings for route at point', point, route)
+}

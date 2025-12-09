@@ -23,7 +23,9 @@ export default function MapView({ selected, routes }) {
     layerRef.current.clearLayers()
 
     if(!selected) return
+    
     const file = routes[selected]
+    
     if(!file) return
 
     const ttFile = `route_details/tt_${file}`
@@ -37,6 +39,7 @@ export default function MapView({ selected, routes }) {
           if(point.LATLAN) {
             const latlon = point.LATLAN.split(' ').reverse().map(x => parseFloat(x))
             const marker = L.marker(latlon)
+            // display all the routes passing through this point
             marker.bindPopup(`<b>${file.substring(3, file.length - 5)} - ${point.POI_NAME}</b> -> ${point.REACH_TIME}`)
             layerRef.current.addLayer(marker)
           }
@@ -52,14 +55,17 @@ export default function MapView({ selected, routes }) {
         })
 
         const pathNoDupes = removeDuplicateArrays(pathCoordinates)
+
         if(pathNoDupes.length) {
           const geoJsonPath = {
             type: 'Feature',
             geometry: { type: 'LineString', coordinates: pathNoDupes },
             properties: {}
           }
+          
           const geo = L.geoJSON(geoJsonPath, { style: { color: 'blue', weight: 4, opacity: 0.7 } })
           layerRef.current.addLayer(geo)
+          
           // fit map to route bounds
           try {
             mapRef.current.fitBounds(geo.getBounds(), { padding: [20, 20] })
