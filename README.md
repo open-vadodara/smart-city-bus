@@ -1,122 +1,28 @@
-# smart-city-bus
+# Plot React
 
-![image](https://github.com/user-attachments/assets/36459f51-239c-4b85-a297-986ec4da7248)
+Minimal React + Vite app that recreates the functionality from `plot.html` and adds a left panel to show one route at a time.
 
-## Details / NOTES
+Quick start
 
-### Getting Route Details
+1. Change to the `plot-react` directory:
 
-Given a time, get route stops + ETA
-
-* URL = `http://14.98.182.250:4016/Route/GetRouteTripDetails`
-* Req payload = `{TimeTableTripID: 1861, ScheduleDate: "09-Oct-2021"}`
-
-**Sample `POST` Request**
 ```bash
-curl 'http://14.98.182.250:4016/Route/GetRouteTripDetails' -X 'POST' -H 'Content-Type: application/json' -d '{TimeTableTripID: 1861, ScheduleDate: "09-Oct-2021"}'
+cd plot-react
 ```
 
-**Sample `GET` Request**
+2. Install dependencies:
+
 ```bash
-14.98.182.250:4016/Route/GetRouteTripTimingDetails?Date=$date&RouteID=$id"
+npm install
 ```
 
-**Sample Response Data**
+3. Run the dev server:
 
-```javascript
-[
-  {
-      "ROWID": 1,
-      "ROUTE_CODE": "9CD",                // bus route number
-      "SCHEDULE_DATE": "11-Oct-2021",     // date as input parameter
-      "TIME_TABLE_TRIP_ID": 15633,        // timetable id for this route
-      "TRIP_TIME": "06:20 AM",            // scheduled departure time from 1st stop (as mentioned in timetable data)
-      "TRIP_END_TIME": "06:53 AM",        // scheduled arrival time at last stop (as mentioned in timetable data)
-      "SEQNO": 0
-  },
-  ...  // more rows
-]
-```
-
-
-### Getting A Route's Time Table Details
-Given a route_id, get all timings for that route
-
-* URL = `http://14.98.182.250:4016/Route/GetRouteTripTimingDetails`
-* Req payload = `{RouteID: "15", Date: "09-Oct-2021"}`
-
-**Sample `POST` Request**
 ```bash
-curl 'http://14.98.182.250:4016/Route/GetRouteTripTimingDetails' -X 'POST' -H 'Content-Type: application/json' -d '{"RouteID": "15", "Date": "09-Oct-2021"}'
+npm run dev
 ```
 
-**Sample `GET` Request**
-```bash
-http://14.98.182.250:4016/Route/GetRouteTripDetails?TimeTableTripID=$timetable_id&ScheduleDate=$date
-```
+Notes
 
-**Sample Response Data**
-
-```javascript
-{
-  "Table": [
-    {
-      "POI_ID": 88,
-      "POI_NAME": "CITY BUS STAND",                       // stop full name
-      "REACH_TIME": "06:00 AM",                           // arrival time at this stop
-      "ETA": "",
-      "POI_SHORT_NAME": "CIBUST",
-      "POI_CODE": "NS1",
-      "POI_NAME_GUJRATI": "સિટી બસ સ્ટેન્ડ",
-      "POI_NAME_HINDI": "सिटी बस स्टैंड",
-      "POI_SEQUENCE_NO": 0,
-      "NEXT_POI_TRAVEL_SCHEDULE_DISTANCE": 736.0,
-      "NEXT_POI_TRAVEL_SCHEDULE_DISTANCE1": 736.0,
-      "LATLAN": "73.182599236745915 22.309806741325158",  // longitude latitude
-      "TRAVELPATH": "LINESTRING (22.309980000000003 73.18258, 22.30994 73.182600000000008, 22.309890000000003 73.18262, 22.309890000000003 73.18262, 22.309910000000002 73.182300000000012, ...)"   // (latitude longitude, ...) as a path
-    },
-    ... // more rows
-  ],
-  "Table1": [
-    {
-      "IS_ACTIVE": "N",
-      "IS_CONNECTED": "Y",
-      "ID": 64,
-      "DEVICE_ID": "8956395992",
-      "IS_GPS_FIX_OK": true,
-      "LATITUDE": 22.3090133333333,
-      "LONGITUDE": 73.1870316666667,
-      "SPEED": 22.0,
-      "ODOMETER": 2437.616,
-      "DIRECTION": 96.0,
-      "GPS_TIME": "2021-10-11T16:47:46",
-      "UPDATE_TIME": "2021-10-11T16:47:46.837",
-      "DEVICE_LOCATION": "INSIDE POI KAMATI BAUG SAYAJI GUNJ",
-      "IDLE_START_TIME": null,
-      "IDLE_DURATION": 0,
-      "MOVING_START_TIME": "2021-10-11T16:47:46",
-      "MOVING_DURATION": 0,
-      "SPEED_LAST_ALERT_FLAG": true,
-      "RD_LAST_ALERT_FLAG": null,
-      "RD_LAST_ALERT_TIME": null,
-      "IS_RD_MARKED_AFTER_LIMIT": null,
-      "ASSIGNED_BUS_RTO_NO": "GJ06AZ0057"
-    }
-  ]
-}
-```
-
-## Data
-
-* All extrated and parsed data are stored in `route_details/` folder
-* `<bus_no>.json` - files contains the respective bus route's timings
-* `tt_<bus_no>.json` - files contains the respective bus route's bus-stop names, lat-long for each bus-stop as well as the sequece of lat-longs i.e. the path/route taken by the bus
-
-
-## Possible Analysis / Products
-
-* Map of all bus-stops in Vadodara
-* Map of all bus routes in Vadodara
-* Get time taken between two stops
-* For a particular stop, get all buses that visit + timings
-* For a partiular bus, get route
+- The app expects the `route_details` directory to be available at the project root (same level as `plot-react`). The dev server must serve that directory so the app can fetch `route_details/` and individual `tt_*.json` files.
+- If fetching the directory listing doesn't work on your server, you can update `src/App.jsx` to provide routes manually or host a small JSON file with the list.
