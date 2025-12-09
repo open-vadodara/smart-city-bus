@@ -59,12 +59,15 @@ export default function App() {
       <div className="left-panel">
         <LeftPanel
           routes={ routes }
-          // selected={selected}
-          // onSelect={setSelected}
+          selected={ selected }
+          setSelect={ setSelected }
         />
       </div>
       <div className="map-container">
-        <MapView selected={ selected } routes={ routes } />
+        <MapView
+          selected={ selected }
+          routes={ routes }
+        />
       </div>
     </div>
   )

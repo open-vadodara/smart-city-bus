@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function LeftPanel({ routes, selected, onSelect }) {
+export default function LeftPanel({ routes, selected, setSelect }) {
   console.log('routes ===', routes)
 
   return (
@@ -9,9 +9,10 @@ export default function LeftPanel({ routes, selected, onSelect }) {
       <ul>
       {
         Object.keys(routes).map((k) => (
-          <li key={ k }
+          <li
+            key={ k }
             className={ `route-item ${selected === k ? 'selected' : ''}` }
-            onClick={() => onSelect(k)}
+            onClick={ () => setSelect(k) }
           >
             { routes[k] }
           </li>

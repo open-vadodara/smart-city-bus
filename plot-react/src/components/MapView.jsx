@@ -8,7 +8,7 @@ export default function MapView({ selected, routes }) {
   const layerRef = useRef(null)
 
   useEffect(() => {
-    if (!mapRef.current) {
+    if(!mapRef.current) {
       mapRef.current = L.map('map').setView([22.3220818, 73.0906863], 13)
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; OpenStreetMap contributors',
@@ -19,12 +19,12 @@ export default function MapView({ selected, routes }) {
 
   // whenever selected changes, clear layers and draw only that route
   useEffect(() => {
-    if (!mapRef.current || !layerRef.current) return
+    if(!mapRef.current || !layerRef.current) return
     layerRef.current.clearLayers()
 
-    if (!selected) return
+    if(!selected) return
     const file = routes[selected]
-    if (!file) return
+    if(!file) return
 
     const ttFile = `route_details/tt_${file}`
     fetch(ttFile)
@@ -34,15 +34,15 @@ export default function MapView({ selected, routes }) {
         const pathCoordinates = []
 
         table.forEach(point => {
-          if (point.LATLAN) {
+          if(point.LATLAN) {
             const latlon = point.LATLAN.split(' ').reverse().map(x => parseFloat(x))
             const marker = L.marker(latlon)
             marker.bindPopup(`<b>${file.substring(3, file.length - 5)} - ${point.POI_NAME}</b> -> ${point.REACH_TIME}`)
             layerRef.current.addLayer(marker)
           }
 
-          if (point.TRAVELPATH) {
-            // TRAVELPATH seems like 'LINESTRING (lon lat, lon lat, ... )'
+          if(point.TRAVELPATH) {
+            // TRAVELPATH seems like 'LINESTRING(lon lat, lon lat, ... )'
             const coordsStr = point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1)
             coordsStr.split(', ').forEach(item => {
               const parts = item.split(' ').reverse().map(a => parseFloat(a))
@@ -52,7 +52,7 @@ export default function MapView({ selected, routes }) {
         })
 
         const pathNoDupes = removeDuplicateArrays(pathCoordinates)
-        if (pathNoDupes.length) {
+        if(pathNoDupes.length) {
           const geoJsonPath = {
             type: 'Feature',
             geometry: { type: 'LineString', coordinates: pathNoDupes },
@@ -63,7 +63,7 @@ export default function MapView({ selected, routes }) {
           // fit map to route bounds
           try {
             mapRef.current.fitBounds(geo.getBounds(), { padding: [20, 20] })
-          } catch (e) {
+          } catch(e) {
             // ignore
           }
         }
