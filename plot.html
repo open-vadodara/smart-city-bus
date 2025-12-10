@@ -35,8 +35,11 @@
 <script>
 
   // load routes names & timetable for routes (filenames only) into memory
-  const ROUTES_DATA = {};
-  const TT_DATA = {};
+  const ROUTES_DATA = {}
+  const TT_DATA = {}
+  
+  let allStops = []   // a universal array to hold all bus stops for all routes
+
   fetch('./route_details/')
   .then(response => response.text())    // response is a stream, so we need to convert it to text
   .then(data => {
@@ -105,7 +108,6 @@
    * @param `routes` <array> - list of route file name for .json data
    */ 
   function showRoute(route) {
-
     const file = ROUTES_DATA[route]
 
     // path data is stored int the `tt_` files
@@ -114,20 +116,28 @@
       .then((data) => {
         const table = data['Table']
         const path_coordinates = []
-
         // Plot each point
         table.forEach((point) => {
-          const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map);
-          marker.bindPopup(`<b>${file.substring(3, file.length - 5)} - ${point.POI_NAME}</b> -> ${point.REACH_TIME}`);
+          let updatedPoints = point
+          updatedPoints['route'] = file.split('.')[0]
+          // prepare data set for all bus stops with route number
+
+          const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map)
+          marker.bindPopup(`<b>${file.substring(3, file.length - 5)} - ${point.POI_NAME}</b> -> ${point.REACH_TIME}`)
 
           point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1).split(', ').forEach((item) => {
             path_coordinates.push(item.split(' ').reverse().map(a => parseFloat(a)))
           })
-        });
+          // updatedPoints['path'] = removeDuplicateArrays(path_coordinates)
+
+          delete updatedPoints['TRAVELPATH']
+          // push to an array with all points
+          allStops.push(updatedPoints)
+        })
 
         // this is because of the data issue in the JSON files
         const path_coords_no_dupes = removeDuplicateArrays(path_coordinates)
-        
+
         // Plot the path using GeoJSON
         const geoJsonPath = {
           type: "Feature",
@@ -144,14 +154,17 @@
             weight: 4,
             opacity: 0.7,
           },
-        }).addTo(map);
+        }).addTo(map)
+        return allStops
+      })
+      .then((allStopsData) => {
+        console.log("All Stops Data:", allStopsData)
       })
       .catch((error) => {
-        console.error("Error loading JSON data:", error);
+        console.error("Error loading JSON data:", error)
       })
     // )
   }
-
 
   function removeDuplicateArrays(arrayOfArrays) {
     // Use a Set to store unique stringified arrays
@@ -166,7 +179,22 @@
         uniqueSet.add(stringified); // Add to Set and keep it
         return true; // Keep this array
       }
-    });
+    })
+  }
+
+  function showAllStopPoints() {
+    fetch(`all_stops.json`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data)
+        data['all_stops'].forEach((point) => {
+          const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map)
+          marker.bindPopup(`<b>${point.route} - ${point.POI_NAME}</b> -> ${point.REACH_TIME}`)
+        })
+      })
+      .catch((error) => {
+        console.error("Error loading JSON data:", error);
+      })
   }
 
   window.onload = (evt) => {
@@ -176,7 +204,10 @@
     // showRoutes(['2U', '23', '21'])
 
     // display all routes
-    Object.keys(ROUTES_DATA).map(e => showRoute(e))
+    // Object.keys(ROUTES_DATA).map(e => showRoute(e))
+    
+    // show all stops (without paths)
+    showAllStopPoints()
   }
 
 </script>
