@@ -60,7 +60,7 @@ export default function LeftPanel({
             checked={showAllRoutes}
             onChange={(e) => setShowAllRoutes(e.target.checked)}
           />
-          <span>Show all routes on map</span>
+          <span>Show all routes</span>
         </label>
       </div>
 
@@ -120,10 +120,6 @@ export default function LeftPanel({
         })}
       </ul>
 
-      <hr />
-      <h3>Selected</h3>
-      <div>{selected !== null ? routeMetadata[selected]?.name || routes[selected] : 'None'}</div>
-      <hr />
       <h3>Instructions</h3>
       <ul>
         <li>Click route name to expand stops and display on map</li>

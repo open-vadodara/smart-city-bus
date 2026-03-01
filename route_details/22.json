@@ -1,0 +1,1154 @@
+[
+  {
+    "ROWID": 1,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 994,
+    "TRIP_TIME": "06:40 AM",
+    "TRIP_END_TIME": "07:15 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 2,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 995,
+    "TRIP_TIME": "06:55 AM",
+    "TRIP_END_TIME": "07:30 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 3,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 996,
+    "TRIP_TIME": "07:10 AM",
+    "TRIP_END_TIME": "07:45 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 4,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 997,
+    "TRIP_TIME": "07:25 AM",
+    "TRIP_END_TIME": "08:00 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 5,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1017,
+    "TRIP_TIME": "07:40 AM",
+    "TRIP_END_TIME": "08:15 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 6,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1039,
+    "TRIP_TIME": "07:55 AM",
+    "TRIP_END_TIME": "08:30 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 7,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1000,
+    "TRIP_TIME": "08:10 AM",
+    "TRIP_END_TIME": "08:45 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 8,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1001,
+    "TRIP_TIME": "08:25 AM",
+    "TRIP_END_TIME": "09:00 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 9,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1003,
+    "TRIP_TIME": "08:40 AM",
+    "TRIP_END_TIME": "09:15 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 10,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 977,
+    "TRIP_TIME": "08:55 AM",
+    "TRIP_END_TIME": "09:30 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 11,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 986,
+    "TRIP_TIME": "09:10 AM",
+    "TRIP_END_TIME": "09:45 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 12,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 998,
+    "TRIP_TIME": "09:25 AM",
+    "TRIP_END_TIME": "10:00 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 13,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1040,
+    "TRIP_TIME": "09:40 AM",
+    "TRIP_END_TIME": "10:15 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 14,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 982,
+    "TRIP_TIME": "09:55 AM",
+    "TRIP_END_TIME": "10:30 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 15,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 978,
+    "TRIP_TIME": "10:10 AM",
+    "TRIP_END_TIME": "10:45 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 16,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 979,
+    "TRIP_TIME": "10:25 AM",
+    "TRIP_END_TIME": "11:00 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 17,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 980,
+    "TRIP_TIME": "10:40 AM",
+    "TRIP_END_TIME": "11:15 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 18,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 981,
+    "TRIP_TIME": "10:55 AM",
+    "TRIP_END_TIME": "11:30 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 19,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 983,
+    "TRIP_TIME": "11:10 AM",
+    "TRIP_END_TIME": "11:45 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 20,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 999,
+    "TRIP_TIME": "11:25 AM",
+    "TRIP_END_TIME": "12:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 21,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1002,
+    "TRIP_TIME": "11:40 AM",
+    "TRIP_END_TIME": "12:15 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 22,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1008,
+    "TRIP_TIME": "11:55 AM",
+    "TRIP_END_TIME": "12:30 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 23,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1023,
+    "TRIP_TIME": "12:10 PM",
+    "TRIP_END_TIME": "12:45 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 24,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1005,
+    "TRIP_TIME": "12:25 PM",
+    "TRIP_END_TIME": "01:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 25,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1006,
+    "TRIP_TIME": "12:40 PM",
+    "TRIP_END_TIME": "01:15 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 26,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1007,
+    "TRIP_TIME": "12:55 PM",
+    "TRIP_END_TIME": "01:30 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 27,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1020,
+    "TRIP_TIME": "01:10 PM",
+    "TRIP_END_TIME": "01:45 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 28,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1009,
+    "TRIP_TIME": "01:25 PM",
+    "TRIP_END_TIME": "02:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 29,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1010,
+    "TRIP_TIME": "01:40 PM",
+    "TRIP_END_TIME": "02:15 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 30,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1011,
+    "TRIP_TIME": "01:55 PM",
+    "TRIP_END_TIME": "02:30 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 31,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1012,
+    "TRIP_TIME": "02:10 PM",
+    "TRIP_END_TIME": "02:45 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 32,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1013,
+    "TRIP_TIME": "02:25 PM",
+    "TRIP_END_TIME": "03:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 33,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1014,
+    "TRIP_TIME": "02:40 PM",
+    "TRIP_END_TIME": "03:15 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 34,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1015,
+    "TRIP_TIME": "02:55 PM",
+    "TRIP_END_TIME": "03:30 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 35,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1016,
+    "TRIP_TIME": "03:10 PM",
+    "TRIP_END_TIME": "03:45 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 36,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1038,
+    "TRIP_TIME": "03:25 PM",
+    "TRIP_END_TIME": "04:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 37,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1018,
+    "TRIP_TIME": "03:40 PM",
+    "TRIP_END_TIME": "04:15 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 38,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1019,
+    "TRIP_TIME": "03:55 PM",
+    "TRIP_END_TIME": "04:30 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 39,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1021,
+    "TRIP_TIME": "04:10 PM",
+    "TRIP_END_TIME": "04:45 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 40,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1024,
+    "TRIP_TIME": "04:25 PM",
+    "TRIP_END_TIME": "05:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 41,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1022,
+    "TRIP_TIME": "04:40 PM",
+    "TRIP_END_TIME": "05:15 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 42,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1036,
+    "TRIP_TIME": "04:55 PM",
+    "TRIP_END_TIME": "05:30 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 43,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1037,
+    "TRIP_TIME": "05:10 PM",
+    "TRIP_END_TIME": "05:45 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 44,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1025,
+    "TRIP_TIME": "05:25 PM",
+    "TRIP_END_TIME": "06:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 45,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 984,
+    "TRIP_TIME": "05:40 PM",
+    "TRIP_END_TIME": "06:15 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 46,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 985,
+    "TRIP_TIME": "05:55 PM",
+    "TRIP_END_TIME": "06:30 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 47,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 993,
+    "TRIP_TIME": "06:10 PM",
+    "TRIP_END_TIME": "06:45 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 48,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 987,
+    "TRIP_TIME": "06:25 PM",
+    "TRIP_END_TIME": "07:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 49,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 988,
+    "TRIP_TIME": "06:40 PM",
+    "TRIP_END_TIME": "07:15 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 50,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 989,
+    "TRIP_TIME": "06:55 PM",
+    "TRIP_END_TIME": "07:30 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 51,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 990,
+    "TRIP_TIME": "07:10 PM",
+    "TRIP_END_TIME": "07:45 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 52,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 991,
+    "TRIP_TIME": "07:25 PM",
+    "TRIP_END_TIME": "08:00 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 53,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 992,
+    "TRIP_TIME": "07:40 PM",
+    "TRIP_END_TIME": "08:15 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 54,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1004,
+    "TRIP_TIME": "07:55 PM",
+    "TRIP_END_TIME": "08:30 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 55,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1026,
+    "TRIP_TIME": "08:10 PM",
+    "TRIP_END_TIME": "08:45 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 56,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1027,
+    "TRIP_TIME": "08:25 PM",
+    "TRIP_END_TIME": "09:00 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 57,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1028,
+    "TRIP_TIME": "08:40 PM",
+    "TRIP_END_TIME": "09:15 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 58,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1029,
+    "TRIP_TIME": "08:55 PM",
+    "TRIP_END_TIME": "09:30 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 59,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1030,
+    "TRIP_TIME": "09:10 PM",
+    "TRIP_END_TIME": "09:45 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 60,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1031,
+    "TRIP_TIME": "09:25 PM",
+    "TRIP_END_TIME": "10:00 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 61,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1032,
+    "TRIP_TIME": "09:40 PM",
+    "TRIP_END_TIME": "10:15 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 62,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1033,
+    "TRIP_TIME": "09:55 PM",
+    "TRIP_END_TIME": "10:30 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 63,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1034,
+    "TRIP_TIME": "10:10 PM",
+    "TRIP_END_TIME": "10:45 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 64,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 1035,
+    "TRIP_TIME": "10:25 PM",
+    "TRIP_END_TIME": "11:00 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 65,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 932,
+    "TRIP_TIME": "05:40 AM",
+    "TRIP_END_TIME": "06:13 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 66,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 933,
+    "TRIP_TIME": "05:55 AM",
+    "TRIP_END_TIME": "06:28 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 67,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 934,
+    "TRIP_TIME": "06:10 AM",
+    "TRIP_END_TIME": "06:43 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 68,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 935,
+    "TRIP_TIME": "06:25 AM",
+    "TRIP_END_TIME": "06:58 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 69,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 936,
+    "TRIP_TIME": "06:40 AM",
+    "TRIP_END_TIME": "07:13 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 70,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 942,
+    "TRIP_TIME": "06:55 AM",
+    "TRIP_END_TIME": "07:28 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 71,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 938,
+    "TRIP_TIME": "07:10 AM",
+    "TRIP_END_TIME": "07:43 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 72,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 939,
+    "TRIP_TIME": "07:25 AM",
+    "TRIP_END_TIME": "07:58 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 73,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 940,
+    "TRIP_TIME": "07:40 AM",
+    "TRIP_END_TIME": "08:13 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 74,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 941,
+    "TRIP_TIME": "07:55 AM",
+    "TRIP_END_TIME": "08:28 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 75,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 976,
+    "TRIP_TIME": "08:10 AM",
+    "TRIP_END_TIME": "08:43 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 76,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 943,
+    "TRIP_TIME": "08:25 AM",
+    "TRIP_END_TIME": "08:58 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 77,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 913,
+    "TRIP_TIME": "08:40 AM",
+    "TRIP_END_TIME": "09:13 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 78,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 937,
+    "TRIP_TIME": "08:55 AM",
+    "TRIP_END_TIME": "09:28 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 79,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 915,
+    "TRIP_TIME": "09:10 AM",
+    "TRIP_END_TIME": "09:43 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 80,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 926,
+    "TRIP_TIME": "09:25 AM",
+    "TRIP_END_TIME": "09:58 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 81,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 917,
+    "TRIP_TIME": "09:40 AM",
+    "TRIP_END_TIME": "10:13 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 82,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 914,
+    "TRIP_TIME": "09:55 AM",
+    "TRIP_END_TIME": "10:28 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 83,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 918,
+    "TRIP_TIME": "10:10 AM",
+    "TRIP_END_TIME": "10:43 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 84,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 916,
+    "TRIP_TIME": "10:25 AM",
+    "TRIP_END_TIME": "10:58 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 85,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 923,
+    "TRIP_TIME": "10:40 AM",
+    "TRIP_END_TIME": "11:13 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 86,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 919,
+    "TRIP_TIME": "10:55 AM",
+    "TRIP_END_TIME": "11:28 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 87,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 920,
+    "TRIP_TIME": "11:10 AM",
+    "TRIP_END_TIME": "11:43 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 88,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 921,
+    "TRIP_TIME": "11:25 AM",
+    "TRIP_END_TIME": "11:58 AM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 89,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 952,
+    "TRIP_TIME": "11:40 AM",
+    "TRIP_END_TIME": "12:13 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 90,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 945,
+    "TRIP_TIME": "11:55 AM",
+    "TRIP_END_TIME": "12:28 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 91,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 946,
+    "TRIP_TIME": "12:10 PM",
+    "TRIP_END_TIME": "12:43 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 92,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 954,
+    "TRIP_TIME": "12:25 PM",
+    "TRIP_END_TIME": "12:58 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 93,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 948,
+    "TRIP_TIME": "12:40 PM",
+    "TRIP_END_TIME": "01:13 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 94,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 949,
+    "TRIP_TIME": "12:55 PM",
+    "TRIP_END_TIME": "01:28 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 95,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 961,
+    "TRIP_TIME": "01:10 PM",
+    "TRIP_END_TIME": "01:43 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 96,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 950,
+    "TRIP_TIME": "01:25 PM",
+    "TRIP_END_TIME": "01:58 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 97,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 951,
+    "TRIP_TIME": "01:40 PM",
+    "TRIP_END_TIME": "02:13 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 98,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 960,
+    "TRIP_TIME": "01:55 PM",
+    "TRIP_END_TIME": "02:28 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 99,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 953,
+    "TRIP_TIME": "02:10 PM",
+    "TRIP_END_TIME": "02:43 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 100,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 963,
+    "TRIP_TIME": "02:25 PM",
+    "TRIP_END_TIME": "02:58 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 101,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 955,
+    "TRIP_TIME": "02:40 PM",
+    "TRIP_END_TIME": "03:13 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 102,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 956,
+    "TRIP_TIME": "02:55 PM",
+    "TRIP_END_TIME": "03:28 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 103,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 957,
+    "TRIP_TIME": "03:10 PM",
+    "TRIP_END_TIME": "03:43 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 104,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 958,
+    "TRIP_TIME": "03:25 PM",
+    "TRIP_END_TIME": "03:58 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 105,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 959,
+    "TRIP_TIME": "03:40 PM",
+    "TRIP_END_TIME": "04:13 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 106,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 965,
+    "TRIP_TIME": "03:55 PM",
+    "TRIP_END_TIME": "04:28 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 107,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 971,
+    "TRIP_TIME": "04:10 PM",
+    "TRIP_END_TIME": "04:43 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 108,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 962,
+    "TRIP_TIME": "04:25 PM",
+    "TRIP_END_TIME": "04:58 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 109,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 974,
+    "TRIP_TIME": "04:40 PM",
+    "TRIP_END_TIME": "05:13 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 110,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 964,
+    "TRIP_TIME": "04:55 PM",
+    "TRIP_END_TIME": "05:28 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 111,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 966,
+    "TRIP_TIME": "05:10 PM",
+    "TRIP_END_TIME": "05:43 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 112,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 975,
+    "TRIP_TIME": "05:25 PM",
+    "TRIP_END_TIME": "05:58 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 113,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 922,
+    "TRIP_TIME": "05:40 PM",
+    "TRIP_END_TIME": "06:13 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 114,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 944,
+    "TRIP_TIME": "05:55 PM",
+    "TRIP_END_TIME": "06:28 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 115,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 924,
+    "TRIP_TIME": "06:10 PM",
+    "TRIP_END_TIME": "06:43 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 116,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 925,
+    "TRIP_TIME": "06:25 PM",
+    "TRIP_END_TIME": "06:58 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 117,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 947,
+    "TRIP_TIME": "06:40 PM",
+    "TRIP_END_TIME": "07:13 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 118,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 927,
+    "TRIP_TIME": "06:55 PM",
+    "TRIP_END_TIME": "07:28 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 119,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 928,
+    "TRIP_TIME": "07:10 PM",
+    "TRIP_END_TIME": "07:43 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 120,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 929,
+    "TRIP_TIME": "07:25 PM",
+    "TRIP_END_TIME": "07:58 PM",
+    "SEQNO": 0
+  },
+  {
+    "ROWID": 121,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 930,
+    "TRIP_TIME": "07:40 PM",
+    "TRIP_END_TIME": "08:13 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 122,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 931,
+    "TRIP_TIME": "07:55 PM",
+    "TRIP_END_TIME": "08:28 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 123,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 967,
+    "TRIP_TIME": "08:10 PM",
+    "TRIP_END_TIME": "08:43 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 124,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 968,
+    "TRIP_TIME": "08:25 PM",
+    "TRIP_END_TIME": "08:58 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 125,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 969,
+    "TRIP_TIME": "08:40 PM",
+    "TRIP_END_TIME": "09:13 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 126,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 970,
+    "TRIP_TIME": "08:55 PM",
+    "TRIP_END_TIME": "09:28 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 127,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 973,
+    "TRIP_TIME": "09:10 PM",
+    "TRIP_END_TIME": "09:43 PM",
+    "SEQNO": 1
+  },
+  {
+    "ROWID": 128,
+    "ROUTE_CODE": "22",
+    "SCHEDULE_DATE": "11-Oct-2021",
+    "TIME_TABLE_TRIP_ID": 972,
+    "TRIP_TIME": "09:25 PM",
+    "TRIP_END_TIME": "09:58 PM",
+    "SEQNO": 1
+  }
+]
