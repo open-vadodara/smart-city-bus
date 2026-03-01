@@ -35,9 +35,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Copy route_details to public folder
+      - name: Prepare route_details for build
         run: |
           mkdir -p public
+          rm -f public/route_details
           cp -r route_details public/
 
       - name: Build
