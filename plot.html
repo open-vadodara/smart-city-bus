@@ -73,12 +73,12 @@
    * @param `routes` <object> - list of routes with route name as key and file name as value
    */
   function loadDropDown(routes) {
-    const select = document.getElementById('bus-routes');
+    const select = document.getElementById('bus-routes')
     for(const route in routes) {
-      const option = document.createElement('option');
-      option.value = routes[route].replace('.json', '');
-      option.text = route;
-      select.appendChild(option);
+      const option = document.createElement('option')
+      option.value = routes[route].replace('.json', '')
+      option.text = route
+      select.appendChild(option)
     }
   }
 
@@ -88,8 +88,9 @@
    * @param `routes` <array> - list of route file name for .json data
    */
   function showTimeTable(routes) {
+    console.log('route data', routes)
     // const files = routes.map((r) => jsonFiles[r].substring(3, jsonFiles[r].length))
-    // const tt_table = document.getElementById('timetable')
+    const tt_table = document.getElementById('timetable')
     timetable.map((file) => {
       fetch(`route_details/${file}`)
       .then((response) => response.json())
@@ -122,7 +123,7 @@
           updatedPoints['route'] = file.split('.')[0]
           // prepare data set for all bus stops with route number
 
-          const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map)
+          const marker = L.marker(point.LATLAN.split(' ').reverse(), { opacity: 0.1, icon: L.divIcon({className: 'my-div-icon'}) }).addTo(map)
           marker.bindPopup(`<b>${file.substring(3, file.length - 5)} - ${point.POI_NAME}</b> -> ${point.REACH_TIME}`)
 
           point.TRAVELPATH.substring(12, point.TRAVELPATH.length - 1).split(', ').forEach((item) => {
@@ -183,12 +184,24 @@
   }
 
   function showAllStopPoints() {
+    const myIcon = L.icon({
+      iconUrl: 'location-dot-solid-full.svg',
+      iconSize: [38, 95],
+      iconAnchor: [22, 94],
+      popupAnchor: [-3, -76],
+      shadowSize: [68, 95],
+      shadowAnchor: [22, 94]
+    })
     fetch(`all_stops.json`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data)
         data['all_stops'].forEach((point) => {
-          const marker = L.marker(point.LATLAN.split(' ').reverse()).addTo(map)
+          const marker = L.marker(
+            point.LATLAN.split(' ').reverse(), {
+              opacity: 0.1,
+              // icon: myIcon
+            }).addTo(map)
           marker.bindPopup(`<b>${point.route} - ${point.POI_NAME}</b> -> ${point.REACH_TIME}`)
         })
       })
