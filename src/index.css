@@ -27,6 +27,139 @@ html, body, #root {
   height: 100%;
 }
 
-.route-item { cursor: pointer; padding: 6px; border-bottom: 1px solid #f0f0f0; }
-.route-item:hover { background: #f7f7f7; }
-.route-item.selected { background: #e6f0ff; }
+/* Controls Section */
+.controls-section {
+  padding: 12px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.show-all-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.show-all-label input[type="checkbox"] {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+/* Route List */
+.routes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Route Item */
+.route-item {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.2s;
+}
+
+.route-item.selected {
+  background-color: #e6f0ff;
+}
+
+/* Route Header */
+.route-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 8px;
+  cursor: pointer;
+  gap: 8px;
+}
+
+.route-header:hover {
+  background-color: #f7f7f7;
+}
+
+/* Bus Icon */
+.bus-icon {
+  width: 18px;
+  height: 18px;
+  fill: #2563eb;
+  flex-shrink: 0;
+}
+
+/* Route Info */
+.route-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 2px;
+}
+
+.route-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1f2937;
+}
+
+.route-destination {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Expand Icon */
+.expand-icon {
+  font-size: 10px;
+  color: #9ca3af;
+  margin-left: auto;
+}
+
+/* Route Stops */
+.route-stops {
+  background: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.stop-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 8px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 12px;
+}
+
+.stop-item:last-child {
+  border-bottom: none;
+}
+
+.stop-sequence {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #2563eb;
+  color: white;
+  border-radius: 50%;
+  font-size: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.stop-name {
+  flex: 1;
+  color: #374151;
+  font-weight: 500;
+}
+
+.stop-time {
+  color: #6b7280;
+  font-size: 11px;
+}
+
+.loading {
+  padding: 16px;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 12px;
+}
