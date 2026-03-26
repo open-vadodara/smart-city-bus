@@ -47,7 +47,8 @@ export default function MapView({ selected, routes, showAllRoutes }) {
           const file = routes[key]
           if (!file) return
 
-          const ttFile = `route_details/tt_${file}`
+          const baseUrl = import.meta.env.BASE_URL
+          const ttFile = `${baseUrl}route_details/tt_${file}`
           const globalIdx = startIdx + idx
           const color = getRouteColor(globalIdx, routeKeys.length)
 
@@ -125,7 +126,8 @@ export default function MapView({ selected, routes, showAllRoutes }) {
     
     if(!file) return
 
-    const ttFile = `route_details/tt_${file}`
+    const baseUrl = import.meta.env.BASE_URL
+    const ttFile = `${baseUrl}route_details/tt_${file}`
     fetch(ttFile)
       .then(res => res.json())
       .then(data => {

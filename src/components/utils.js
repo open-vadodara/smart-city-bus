@@ -18,7 +18,8 @@ export default function removeDuplicateArrays(arrayOfArrays) {
  * Fetch route destination from tt_*.json file
  */
 export async function fetchRouteDestination(routeFile) {
-  const response = await fetch(`route_details/tt_${routeFile}`)
+  const baseUrl = import.meta.env.BASE_URL
+  const response = await fetch(`${baseUrl}route_details/tt_${routeFile}`)
   const data = await response.json()
   const table = data.Table || []
 
@@ -36,7 +37,8 @@ export async function fetchRouteDestination(routeFile) {
  * Fetch all stops for a route in sequential order
  */
 export async function fetchRouteStops(routeFile) {
-  const response = await fetch(`route_details/tt_${routeFile}`)
+  const baseUrl = import.meta.env.BASE_URL
+  const response = await fetch(`${baseUrl}route_details/tt_${routeFile}`)
   const data = await response.json()
   const table = data.Table || []
 

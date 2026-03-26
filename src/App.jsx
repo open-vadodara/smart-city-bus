@@ -8,7 +8,8 @@ import { fetchRouteDestination } from './components/utils'
 export default function App() {
   
   function fetchRouteFilenames() {
-    return fetch('/route_details/filenames.txt')
+    const baseUrl = import.meta.env.BASE_URL
+    return fetch(`${baseUrl}route_details/filenames.txt`)
       .then(res => res.text())
       .then(text => text.split('\n'))
   }
