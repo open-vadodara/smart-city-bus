@@ -5,9 +5,10 @@ export default function Header() {
     <header className="app-header">
       <div className="header-left">
         <div className="logo-placeholder">
-          <svg className="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          {/* <svg className="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
-          </svg>
+          </svg> */}
+          <img style={{ width: `24px`, height: `24px` }} src='https://avatars.githubusercontent.com/u/92157360?s=400&u=c52a44425818b0bcdfa44f6fb3a6e678c8524b13&v=4' alt='open-vaddoara' />
         </div>
         <div className="app-title">
           <h1>Smart City Bus</h1>
